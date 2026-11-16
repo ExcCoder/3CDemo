@@ -1,0 +1,69 @@
+# ============================================================================
+# Unity project attributes — normalises line endings and protects binaries.
+# ============================================================================
+* text=auto
+
+# C# / shader / config sources: keep LF, use C# diff highlighting
+*.cs       text diff=csharp
+*.shader   text
+*.compute  text
+*.hlsl     text
+*.cginc    text
+*.json     text
+*.xml      text
+*.asmdef   text
+*.asmref   text
+*.md       text
+
+# Unity YAML scenes / prefabs / assets: LF only.
+# Quick guide: once merge tooling is installed, uncomment the merge= driver
+# and register it with:
+#   git config merge.unityyamlmerge.name "Unity SmartMerge"
+#   git config merge.unityyamlmerge.driver \
+#     '"<UnityEditor>/Editor/Data/Tools/UnityYAMLMerge.exe" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"'
+*.unity    text eol=lf
+*.prefab   text eol=lf
+*.asset    text eol=lf
+*.mat      text eol=lf
+*.anim     text eol=lf
+*.controller text eol=lf
+*.overrideController text eol=lf
+*.physicMaterial text eol=lf
+*.physicsMaterial2D text eol=lf
+*.preset   text eol=lf
+*.meta     text eol=lf
+*.manifest text eol=lf
+
+# Binary assets — never diff/merge as text
+*.fbx      binary
+*.FBX      binary
+*.obj      binary
+*.OBJ      binary
+*.blend    binary
+*.max      binary
+*.ma       binary
+*.mb       binary
+*.3ds      binary
+*.lxo      binary
+*.dae      binary
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.tga      binary
+*.psd      binary
+*.tif      binary
+*.tiff     binary
+*.exr      binary
+*.hdr      binary
+*.wav      binary
+*.mp3      binary
+*.ogg      binary
+*.mp4      binary
+*.mov      binary
+*.ttf      binary
+*.otf      binary
+*.dll      binary
+*.so       binary
+*.a        binary
+*.bundle   binary
+*.universalRenderPipeline binary
